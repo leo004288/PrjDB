@@ -18,8 +18,9 @@ public class prec {
 		Connection conn = DriverManager.getConnection(url, dbuid, dbpwd);
 		
 		Statement stmt = conn.createStatement();
-		String    sql  = "SELECT EMPLOYEE_ID, FIRST_NAME || LAST_NAME, PHONE_NUMBER "
-						+ "FROM EMPLOYEES ";
+		String    sql  = "SELECT d.department_name, e.FIRST_NAME || ' ' || e.LAST_NAME, e.PHONE_NUMBER "
+						+ "FROM EMPLOYEES e LEFT JOIN departments d ON e.department_id = d.department_id ";
+//		System.out.println(sql);
 		ResultSet rs   = stmt.executeQuery(sql); 
 		
 		while(rs.next() != false ) {
