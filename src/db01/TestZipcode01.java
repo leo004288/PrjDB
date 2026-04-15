@@ -27,7 +27,6 @@ public class TestZipcode01 {
 		
 		System.out.println(rs.getInt("cnt"));
 		
-		rs.close();
 		stmt.close();
 		conn.close();
 		
