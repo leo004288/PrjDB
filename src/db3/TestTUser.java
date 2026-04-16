@@ -121,8 +121,8 @@ public class TestTUser {
 			
 		}
 		
-		conn.close();
 		pstmt.close();
+		conn.close();
 		
 		return tuser;
 	}
