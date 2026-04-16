@@ -19,7 +19,8 @@ public class prec {
 		
 		Statement stmt = conn.createStatement();
 		String    sql  = "SELECT d.department_name, e.FIRST_NAME || ' ' || e.LAST_NAME, e.PHONE_NUMBER "
-						+ "FROM EMPLOYEES e LEFT JOIN departments d ON e.department_id = d.department_id ";
+						+ "FROM EMPLOYEES e LEFT JOIN departments d ON e.department_id = d.department_id "
+				        + "ORDER BY employee_id ";
 //		System.out.println(sql);
 		ResultSet rs   = stmt.executeQuery(sql); 
 		
