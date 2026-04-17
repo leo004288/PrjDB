@@ -168,7 +168,7 @@ public class TestTUser {
 		Connection        conn   = DriverManager.getConnection(url, dbuid, dbpwd);
 		
 		String sql  = "";
-	           sql += "UPDATE tuser SET username = ?, email = ?, WHERE userid = ? ";
+	           sql += "UPDATE tuser SET username = ?, email = ? WHERE userid = ? ";
         PreparedStatement pstmt  = conn.prepareStatement(sql);
         pstmt.setString(1, tuser.getUsername());
 	    pstmt.setString(2, tuser.getEmail());
