@@ -29,3 +29,18 @@ INSERT INTO TUSER VALUES ('sky4', '스카이4', 'sky4@green.com');
 INSERT INTO TUSER VALUES ('sky5', '스카이5', 'sky4@green.com');
 
 COMMIT;
+ROLLback;
+
+SELECT * FROM TUSER;
+
+SELECT * FROM TUSER
+WHERE  userid = 'sky1';
+
+UPDATE tuser
+SET    username = '스카이1',
+       email    = 'sky1@green.com'
+WHERE  userid   = 'sky1';
+
+DELETE 
+FROM  tuser
+WHERE userid = 'sea';

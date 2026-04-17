@@ -14,12 +14,16 @@ public class TUserDTO {
 //  constructor
 	public TUserDTO() {}
 	public TUserDTO(String userid, String username, String email) {
-		this.userid = userid;
+		this.userid   = userid;
 		this.username = username;
-		this.email = email;
+		this.email    = email;
 	}
-	
-//  getter / setter
+    public TUserDTO(String username, String email) {
+    	this.username = username;
+		this.email    = email;
+	}
+    
+	//  getter / setter
 	public String getUserid() {
 		return userid;
 	}
